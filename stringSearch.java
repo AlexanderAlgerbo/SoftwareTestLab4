@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
 
 public class stringSearch {
@@ -12,7 +11,6 @@ public class stringSearch {
 
         if(command.length == 3 && command[0].toLowerCase().equals("search")){
             String pattern = command[1];
-            FileReader fileReader = new FileReader(command[2]);
             
             try(Scanner myReader = new Scanner(new File(command[2]))){
                 while(myReader.hasNext()){
